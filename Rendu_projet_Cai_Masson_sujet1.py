@@ -136,22 +136,22 @@ def anomalies(variable,numero):                     #Méthode écart aux extrema
         
         if numero == '1':  
             time,capteur_numero,date_max,date_min = time1,capteur_1,Mdate1,mdate1
-            pas = 45
+            pas = 1
         elif numero == '2':
             time,capteur_numero,date_max,date_min = time2,capteur_2,Mdate2,mdate2
-            pas = 30
+            pas = 1
         elif numero == '3':
             time,capteur_numero,date_max,date_min = time3,capteur_3,Mdate3,mdate3
-            pas = 30
+            pas = 1
         elif numero == '4':
             time,capteur_numero,date_max,date_min = time4,capteur_4,Mdate4,mdate4
-            pas  = 30
+            pas  = 1
         elif numero == '5':
             time,capteur_numero,date_max,date_min = time5,capteur_5,Mdate5,mdate5
-            pas = 1140
+            pas = 19
         elif numero == '6':
             time,capteur_numero,date_max,date_min = time6,capteur_6,Mdate6,mdate6
-            pas = 45
+            pas = 1
         
         anomalies = []
         points_anomalies = []
@@ -182,7 +182,7 @@ def anomalies(variable,numero):                     #Méthode écart aux extrema
                  
         # On détermine la moyenne maximale et minimale sur la période
         t = date_min
-        delta = pd.Timedelta( minutes = pas ) 
+        delta = pd.Timedelta( hours = pas ) 
         max_jour = []
         min_jour = []
         
